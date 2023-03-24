@@ -13,6 +13,8 @@ library(ggmosaic)
 HAPPY<- readRDS("Happy.rds")
 ```
 
+Link to repository: https://github.com/trl703/homework7
+
 Cleaning:
 ```{r}
 HAPPY[HAPPY == "DK" | HAPPY == "IAP" | HAPPY == "NA"] <- NA
@@ -48,7 +50,8 @@ Tracie-Lynn's question:
 ggplot(data = HAPPY) + geom_mosaic(aes(x = product(MARITAL), fill = HAPPY, weight = 1), na.rm = TRUE)+ facet_wrap(HAPPY$HEALTH) + theme_classic()
 ```
 Tracie-Lynn decided to investigate the relationship of happiness, marital status, and health. It seems like a 
-lot more people are happy if they are in better health and married as opposed to poor health and never married married.  
+lot more people are happy if they are in better health and married as opposed to poor health and never married married. 
+
 Macy's question: Macy's question: Happiness, Degree, Finrela
 
 ```{r}
