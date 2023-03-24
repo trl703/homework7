@@ -12,12 +12,14 @@ library(ggplot2)
 HAPPY<- readRDS("Happy.rds")
 ```
 
+Cleaning:
 ```{r}
 HAPPY[HAPPY == "DK" | HAPPY == "IAP" | HAPPY == "NA"] <- NA
 HAPPY$AGE[HAPPY$AGE == "89 OR OLDER"] <-89
 str(HAPPY)
 ```
 
+Casting columns:
 ```{r}
 HAPPY$HAPPY <- as.factor(HAPPY$HAPPY)
 HAPPY$YEAR <- as.numeric(HAPPY$YEAR)
@@ -31,6 +33,7 @@ HAPPY$PARTYID <- as.factor(HAPPY$PARTYID)
 HAPPY$POLVIEWS <- as.factor(HAPPY$POLVIEWS)
 ```
 
+Re-ordering levels:
 ```{r}
 HAPPY$DEGREE <- factor(HAPPY$DEGREE, levels = levels(reorder(HAPPY$DEGREE, HAPPY$AGE, na.rm = TRUE)))
 HAPPY$MARITAL <- factor(HAPPY$MARITAL, levels = levels(reorder(HAPPY$MARITAL, HAPPY$AGE, na.rm = TRUE)))
@@ -39,7 +42,18 @@ HAPPY$FINRELA <- factor(HAPPY$FINRELA, levels = c("FAR BELOW AVERAGE", "BELOW AV
 HAPPY$HEALTH <- factor(HAPPY$HEALTH, levels = c("POOR", "FAIR", "GOOD", "EXCELLENT"))
 ```
 
+Tracie-Lynn's question:
 ```{r}
 
+
+```
+
+Macy's question:
+```{r}
+
+```
+
+Nic's question:
+```{r}
 
 ```
