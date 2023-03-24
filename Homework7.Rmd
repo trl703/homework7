@@ -52,10 +52,10 @@ lot more people are happy if they are in better health and married as opposed to
 Macy's question: Macy's question: Happiness, Degree, Finrela
 
 ```{r}
-library(ggplot2)
-library(ggmosaic)
 ggplot(HAPPY) + geom_mosaic(aes(x = product(DEGREE), fill = HAPPY, weight = 1), na.rm = TRUE) + facet_wrap(~FINRELA)
 ```
+
+In my plot I compared happiness with degree and financial opinion. We can see that when people view their financial status as better, they are happier. We can also see that people with higher education are slightly more happy than those who recieved a lower level of education.
 
 Nic's question: I looked at the relationship between happiness, marital status, and sex. People who are married are notably more likely to be very happy and are less likely to be not too happy. People who are separated have the lowest happiness rate and the highest happiness rate. Both of these carry between the sexes. Males, regardless of marital status, are less likely to be very happy, but they have similar rates of not too happy.
 
