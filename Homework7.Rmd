@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(ggplot2)
+library(ggmosaic)
 HAPPY<- readRDS("Happy.rds")
 ```
 
@@ -57,5 +58,5 @@ ggplot(HAPPY) + geom_mosaic(aes(x = product(DEGREE), fill = HAPPY, weight = 1), 
 
 Nic's question:
 ```{r}
-
+ggplot(data = HAPPY) + geom_mosaic(aes(x = product(MARITAL), fill = HAPPY, weight = 1), na.rm = TRUE) + facet_wrap(HAPPY$SEX)
 ```
