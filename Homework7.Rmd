@@ -45,11 +45,12 @@ HAPPY$HEALTH <- factor(HAPPY$HEALTH, levels = c("POOR", "FAIR", "GOOD", "EXCELLE
 
 Tracie-Lynn's question:
 ```{r}
-
-
+ggplot(data = HAPPY) + geom_mosaic(aes(x = product(MARITAL), fill = HAPPY, weight = 1), na.rm = TRUE)+ facet_wrap(HAPPY$HEALTH) + theme_classic()
 ```
+Tracie-Lynn decided to investigate the relationship of happiness, marital status, and health. It seems like a 
+lot more people are happy if they are in better health and married as opposed to poor health and never married married.  
+Macy's question: Macy's question: Happiness, Degree, Finrela
 
-Macy's question: Happiness, Degree, Finrela
 ```{r}
 library(ggplot2)
 library(ggmosaic)
